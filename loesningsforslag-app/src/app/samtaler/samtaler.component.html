@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row my-3">
+
+        <div class="col-sm">
+            <button class="btn btn-primary" (click)="visAlle()">Alle </button>
+        </div>
+
+        <div class="col-sm">
+            <button class="btn btn-primary" (click)="visKunMineUtgaaende()">Mine utgående </button>
+        </div>
+
+        <div class="col-sm">
+            <button class="btn btn-primary" (click)="visKunMineInnkommende()">Mine innkommende</button>
+        </div>
+
+    </div>
+    <div class="row h4 py-2  border  rounded mb-0">
+        <div class="col-1">Id</div>
+        <div class="col-4">Fra nummer</div>
+        <div class="col-4">Til nummer</div>
+        <div class="col-3">Varighet</div>
+    </div>
+
+    <div class="row border    border-{{bgClass(samtale.type)}}" *ngFor="let samtale of samtaler.samtaler">
+        <div class="py-2 col-1 bg-{{bgClass(samtale.type)}}">{{samtale.id}} </div>
+        <div class="py-2 col-4">{{samtale.fraNummer}} </div>
+        <div class="py-2 col-4">{{samtale.tilNummer}} </div>
+
+        <div class="py-2 col-3">{{varighet(samtale.varighet)}} </div>
+    </div>
+</div>
+
+<h5 class="mt-3 ml-3">Sist oppdatert {{sistOppdatert(samtaler)}}</h5>

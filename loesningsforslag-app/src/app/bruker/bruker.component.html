@@ -1,0 +1,14 @@
+<div class="card main-card border-dark" *ngIf="bruker">
+    <div class="card-header text-white bg-dark ">Pålogget bruker</div>
+    <div class="card-body text-dark bg-light">
+
+        <div class="float-right mx-3 " *ngIf="bruker.links">
+            <img class="profilePicture" src="{{bruker.links.img}}" />
+        </div>
+        <ul>
+            <li><strong>Navn:</strong>{{bruker.navn}} </li>
+            <li><strong>BID:</strong>{{bruker.bid}} </li>
+            <li><strong>Tlf:</strong>{{bruker.tlfNummer}} </li>
+        </ul>
+    </div>
+</div>

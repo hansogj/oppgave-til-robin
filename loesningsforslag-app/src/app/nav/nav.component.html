@@ -1,0 +1,12 @@
+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between text-white">
+            <p class="my-2">
+                [
+                <a class="nav-link" (click)="goTo('/bruker')">Bruker</a> |
+                <a class="nav-link" (click)="goTo('/samtaler')">Samtaler</a> ]
+            </p>
+            <p class="my-2">{{bruker.navn}} {{'{'}} <span class="text-itallic">{{bruker.bid}} {{'}'}}</span></p>
+        </div>
+    </div>
+</header>
